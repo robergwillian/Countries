@@ -5,7 +5,7 @@ export default function Header() {
 
         <header className="App-header">
             <a href="/"><img src={logo} className="App-logo" alt="logo" /></a>
-
+            <h1>WORLD COUNTRIES</h1>
         </header>
     )
 }

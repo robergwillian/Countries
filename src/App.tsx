@@ -15,8 +15,7 @@ function App() {
           <Header />
           <Routes>
             <Route path="/" element={<List/>}/>
-            <Route path="/country" element={<SingleCountry/>}>
-              <Route path=":country_code" element={<SingleCountry/>}/>
+            <Route path="/country/:country_code" element={<SingleCountry/>}>
             </Route>
           </Routes>
       </Router>
