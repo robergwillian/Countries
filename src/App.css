@@ -1,11 +1,22 @@
 .App {
   text-align: center;
+  width: 50vw;
+  height: 50vh;
+  margin: auto;
+  min-height: 100vh;
 }
 
 .App-logo {
   height: 40vmin;
   pointer-events: none;
 }
+
+  .card-content{
+    padding:10px;
+    align-items: center;
+  }
+
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -14,14 +25,19 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+  background-color: #eeeeee;
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
+  justify-content: space-between;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding: 20px ;
+}
+
+.App-header img{
+  width:10%;
+  height: 10%;
 }
 
 .App-link {
