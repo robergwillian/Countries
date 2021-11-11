@@ -9,7 +9,7 @@ export const Wrapper = styled.section`
   justify-content: space-between;
   gap: 10px;
 
-  @media (max-width:360px){
+  @media (max-width:450px){
     flex-direction:column;
   }
 `;
@@ -19,7 +19,7 @@ export const SideFilters = styled.aside`
   display: flex;
   flex-direction: column;
 
-  @media(max-width:360px){
+  @media(max-width:450px){
     width:100%;
   }
 `;
@@ -27,7 +27,7 @@ export const SideFilters = styled.aside`
 export const CountryList = styled.div`
   width: 75%;
 
-  @media(max-width:360px){
+  @media(max-width:450px){
     width:100%;
   }
 `;

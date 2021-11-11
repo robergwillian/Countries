@@ -24,7 +24,7 @@ export const List = styled.div`
     overflow-y:scroll;
 
     
-  @media(max-width:360px){
+  @media(max-width:450px){
     width:100%;
   }
 `;
