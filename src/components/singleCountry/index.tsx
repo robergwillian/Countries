@@ -1,9 +1,9 @@
 import {SingleWrapper} from './styles';
 
 
-type TCountryCode = {
-    code: string
-}
+// type TCountryCode = {
+//     code: string
+// }
 
 export default function SingleCountry() {
 
