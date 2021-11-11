@@ -16,6 +16,10 @@
     align-items: center;
   }
 
+  .Container{
+    max-height: 100vh;
+  }
+
 
 
 @media (prefers-reduced-motion: no-preference) {
