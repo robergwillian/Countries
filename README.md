@@ -3,6 +3,9 @@
 Developement test made with ReactJS, Typescript, GraphQL.
 You can see a live version of this app at: https://countries-rc-ts-gql.netlify.app/
 
+
+Algorithm exercise is on the algo-row.js file
+
 ## Available Scripts
 
 In the project directory, you can run:
