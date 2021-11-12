@@ -54,7 +54,7 @@ export default function List() {
           placeholder="Search Currency ex: USD"
           onChange={(e) => setCurrency(e.target.value)}
         />
-        <SearchButton onClick={() => getCurrency()}>Search</SearchButton>
+        <SearchButton>Search</SearchButton>
         <div className="">
           <SelectField onChange={(e) => setContinent(e.target.value)}>
             {continent_data.continents.map((continent: TContinent) => (
