@@ -1,5 +1,5 @@
 import { Wrapper, SideFilters, SideBarInput, SearchButton, SelectField } from "./styles";
-import { gql, useLazyQuery, useQuery } from "@apollo/client";
+import { gql, useQuery } from "@apollo/client";
 import { useState } from "react";
 import CountryList from "../countryList/index";
 
@@ -10,7 +10,7 @@ type TContinent = {
 
 export default function List() {
   const [continent, setContinent] = useState("AF");
-  const [currency, setCurrency] = useState("");
+  // const [currency, setCurrency] = useState("");
 
   const LIST_CONTINENTS = gql`
     {
@@ -21,15 +21,15 @@ export default function List() {
     }
   `;
 
-  const FILTER_BY_CURRENCY = gql`
-  {
-    countries(filter: { currency: { in: "${currency.toUpperCase()}"} }) {
-            name
-            code
-          }
+  // const FILTER_BY_CURRENCY = gql`
+  // {
+  //   countries(filter: { currency: { in: "${currency.toUpperCase()}"} }) {
+  //           name
+  //           code
+  //         }
       
-    }
-  `;
+  //   }
+  // `;
 
   const {
     data: continent_data,
@@ -37,7 +37,7 @@ export default function List() {
     error: continent_error,
   } = useQuery(LIST_CONTINENTS);
 
-  const [getCurrency, { data: currency_data }] = useLazyQuery(FILTER_BY_CURRENCY);
+  // const [getCurrency, { data: currency_data }] = useLazyQuery(FILTER_BY_CURRENCY);
 
   if (continent_loading || continent_error) {
     return <p>{continent_error ? continent_error.message : "Loading..."}</p>;
@@ -52,7 +52,7 @@ export default function List() {
           type="text"
           name="currency"
           placeholder="Search Currency ex: USD"
-          onChange={(e) => setCurrency(e.target.value)}
+          // onChange={(e) => setCurrency(e.target.value)}
         />
         <SearchButton>Search</SearchButton>
         <div className="">
@@ -65,11 +65,12 @@ export default function List() {
           </SelectField>
         </div>
       </SideFilters>
-      {currency_data ? (
+      {/* {currency_data ? (
         <CountryList code={currency_data} />
       ) : (
         <CountryList code={continent} />
-      )}
+      )} */}
+      <CountryList code={continent}/>
     </Wrapper>
   );
 }
